@@ -11,6 +11,18 @@
         #vektor{
             background-image: url(asset/image/prakeja.png);
         }
+        #font{
+            font-size: 12px;
+        }
+        input:focus{
+            outline: none;
+        }
+        input:hover{
+            border: 0;
+        }
+        input:active{
+            border: 0;
+        }
     </style>
 </head>
 <body>
@@ -23,39 +35,42 @@
                     <img src="asset/image/prakerja2.png" class="mt-5" width="160" alt="">
                 </div>
                 <!-- login info -->
-                <div class="d-flex flex-column pt-5">
+                <div class="d-flex flex-column pt-4">
                     <h5 class="text-primary">Login</h5>
                     <p class="lead text-info">Bagi kamu yang sudah terdaftar,Silahkan login</p>
                 </div>
                 <!-- login form -->
                 <div class="d-flex flex-column">
                     <form>
-                        <div>
+                        <div class="d-flex.flex-column shadow p-3 mb-5 bg-white rounded">
                             <small>Email</small>
-                        </div>
-                        <input type="text" placeholder="masukan Email" style="width: 250px;">
-                        <div>
+                            <div class="d-flx flex-row">
+                                <input id="font" class="border-0" type="text" placeholder="masukan Email" style="width: 200px;">
+                            </div>
+                            <hr class="m-1">
                             <small>Password</small>
+                            <div class="d-flex flex-row">
+                                <input id="font" class="border-0" type="password" placeholder="masukan password" style="width: 250px;">
+                                <i class="far fa-eye position-relative text-muted" style="margin-left: 137px;"></i>
+                            </div>
                         </div>
-                        <input type="password" placeholder="masukan password" style="width: 250px;">
-                        <i class="far fa-eye position-relative ml-n4"></i>
                     </form>
                 </div>
                 <!-- login adtional -->
-                <div class="d-flex flex-row justify-content-between mt-3">
+                <div class="d-flex flex-row justify-content-between">
                     <form>
                         <input type="checkbox"><small class="text-muted pl-1">ingat saya</small>
                     </form>
-                    <div><a href="#" class="text-info" style="padding-right: 180px;"><small>Lupa password?</small></a></div>
+                    <div><a href="#" class="text-info" style="padding-right: px;"><small>Lupa password?</small></a></div>
                 </div>
                 <!-- tombol -->
-                <div class="d-flex flex-row justify-content-between mt-5">
-                    <button class="btn btn-primary" type="submit">  Login  </button>
-                    <button type="button" style="margin-right: 250px;" class="btn btn-outline-primary">  Daftar  </button>
+                <div class="d-flex flex-row justify-content-between m-1 mt-5">
+                    <button class="btn btn-primary" style="width: 100px;" type="submit">  Login  </button>
+                    <button type="button" style="margin-right: 200px; width: 100px;" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">  Daftar  </button>
                 </div>
                 <!-- footer -->
                 <div class="d-flex flex-column">
-                    <p style="margin-top: 70px;margin-left: 150px;"><small>Copyright:2020&copy;</small></p>
+                    <p style="margin-left: 150px;margin-top: 33px;"><small>Copyright:2020&copy;</small></p>
                 </div>
             </div>
             <div id="vektor" class="col-8 bg-dark border">
@@ -63,6 +78,78 @@
             </div>
         </div>
     </div>
+
+    <!-- modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12" id="sidebar">
+                            <!-- logo -->
+                            <div class="d-flex flex-column bd-highlight">
+                                <img src="asset/image/prakerja2.png" class="" width="170" alt="">
+                            </div>
+                            <!-- login info -->
+                            <div class="d-flex flex-column pt-5">
+                                <h6 class="" style="font-family: cursive; font-size: 20px; color: rgb(77, 77, 252);"><b>Kuy lah daftar kartu prakerja!</b></h6>
+                                <p class="lead" style="font-size: 15px; font-family: cursive; color: rgb(101, 101, 255);">Mohon isi data di bawah ini dengan benar
+
+                                </p>
+                            </div>
+                            <!-- login form -->
+                            <div class="d-flex flex-column">
+                                <form>
+                                    <div class="d-flex flex-column shadow p-3 mb-5 bg-white rounded">
+                                        <small>Alamat Email</small>
+                                        <input class="border-0" type="text" id="font" placeholder="alamat@email.com" style="width: 250px;">
+                                    </div>
+                                </form>
+                                
+                                <form>
+                                    <div class="d-flex flex-column shadow p-3 mb-5 bg-white rounded">
+                                        
+                                        <small>Password</small>
+
+                                        <div class="d-flex flex-row">
+                                            <input class="border-0" type="password" id="font" placeholder="gunakan 6 karakter atau lebih" style="width: 250px;">
+                                            <i class="far fa-eye position-relative mr-n5 text-muted" style="margin-left: 137px;"></i>
+                                        </div>
+                                        <hr class="m-1">
+                                        <small>Konfirmasi Password</small>
+                                        <div class="d-flex flex-row">
+                                            <input class="border-0" type="password" id="font" placeholder="konfirmasi ulang password" style="width: 250px;">
+                                            <i class="far fa-eye position-relative text-muted" style="margin-left: 150px;"></i>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- login adtional -->
+                            <div class="d-flex flex-row justify-content-between mt-4">
+                                <form>
+                                    <input type="checkbox"><small class="text-muted pl-1">Saya menyetujui <a href="#"><u>syarat dan ketentuan</u></a> dan <br> <a href="#" class="ml-3"><u>kebijakan privasi</u></a> yang berlaku </small>
+                                </form>
+                            </div>
+                            <!-- tombol -->
+                            <div class="d-flex flex-row justify-content-between mt-4">
+                                <button class="btn btn-primary" style="width: 90px;" type="submit">  Daftar  </button>
+                            </div>
+                            <!-- footer -->
+                            <div class="d-flex flex-column mt-3">
+                                <p><small><span class="text-muted">sudah daftar?</span><span class="text-primary">Login</span></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- optional js -->
     <script src="asset/js/jquery-3.5.1.slim.min.js"></script>
